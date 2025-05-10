@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+
+    /* Shorten import */
+    "baseUrl": "./src",
+    "paths": {
+      "@fixtures/*": ["fixtures/*"],
+      "@pages/*": ["pages/*"]
+    },
+
+    /* Modules */
+    "module": "CommonJS",
+    "typeRoots": ["./node_modules/@types"],
+    "moduleResolution": "node" /* Specify module resolution strategy */,
+    "resolveJsonModule": true /* Enable importing .json files */,
+
+    /* Interop Constraints */
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export */,
+
+    /* Type Checking */
+    "strict": false /* Enable all strict type-checking options. */,
+    "strictNullChecks": false /* When type checking, take into account 'null' and 'undefined'. */,
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type */,
+    "noUnusedLocals": true /* Report errors on unused locals */,
+    "noUnusedParameters": true /* Report errors on unused parameters */,
+    "noImplicitReturns": true /* Report error when not all code paths in function return a value */,
+
+    /* Completeness */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "sourceMap": true /* Generates corresponding .map file */,
+    "declaration": true /* Generates corresponding .d.ts file */,
+    "outDir": "./dist" /* Redirect output structure to the directory */
+  },
+  "include": ["src/**/*" /* Include all files under src directory */]
+}

@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
-import { Login } from './login';
-import { DashBoard } from './dashboard';
+import { Login } from '@pages/login';
+import { DashBoard } from '@pages/dashboard';
 
 export class PageManager {
   login: Login;

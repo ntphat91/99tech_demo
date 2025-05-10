@@ -1,4 +1,4 @@
-import { BasePage } from './base-page';
+import { BasePage } from '@pages/base-page';
 
 export class Login extends BasePage {
   private usernameInput = this.page.locator("//input[@name='username']");
