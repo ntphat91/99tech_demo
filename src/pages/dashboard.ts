@@ -1,9 +1,3 @@
-import { BasePage } from '@pages/base-page';
+import { SideMenu } from '@pages/side-menu';
 
-export class DashBoard extends BasePage {
-  private sideMenu = this.page.locator(`//aside[@class='oxd-sidepanel']`);
-
-  async waitForSideMenu() {
-    await this.waitForLocatorVisible(this.sideMenu);
-  }
-}
+export class DashBoard extends SideMenu {}

@@ -10,9 +10,13 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Run Playwright Tests Manually'
+        description: 'Script to run playwright tests manually'
         # Default value if no value is explicitly provided
-        default: 'Manual Run'
+        default: 'test'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -29,7 +33,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npx playwright test
+        run: npx playwright ${{ inputs.name }}
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:

@@ -14,4 +14,8 @@ export class BasePage {
   async waitForLocatorVisible(locator: Locator) {
     await locator.waitFor({ state: 'visible' });
   }
+
+  async waitForLocatorHidden(locator: Locator) {
+    await locator.waitFor({ state: 'hidden' });
+  }
 }

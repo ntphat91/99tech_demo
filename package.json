@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "debug": "npx playwright test",
+    "debug": "npx playwright test -g @search",
+    "test": "npx playwright test",
+    "smoke": "npx playwright test -g @smoke",
     "chromium": "npx playwright test --project chromium",
     "webkit": "npx playwright test --project webkit",
     "firefox": "npx playwright test --project firefox"
@@ -14,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.16"
+    "@types/node": "^22.15.16",
+    "dotenv": "^16.5.0"
   }
 }
