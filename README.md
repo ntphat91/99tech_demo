@@ -67,3 +67,28 @@ src/
 - Environment-specific configurations are in `src/data/{env}.json`
 - Playwright configuration in `playwright.config.ts`
 - Test data and selectors are maintained in respective page objects
+
+## Running Tests via GitHub Actions
+
+You can run tests manually through GitHub Actions workflow:
+
+1. Go to the "Actions" tab in your GitHub repository
+2. Select "Manual Playwright Tests" workflow
+3. Click "Run workflow"
+4. Enter the script name you want to run:
+   - `test` - Run all tests
+   - `chromium` - Run tests in Chromium
+   - `firefox` - Run tests in Firefox
+   - `webkit` - Run tests in WebKit
+   - `smoke` - Run tests with specific tag @smoke
+5. Click "Run workflow"
+
+The workflow will:
+
+- Set up Node.js environment
+- Install dependencies
+- Install Playwright browsers
+- Run the specified test script
+- Upload test reports as artifacts (retained for 30 days)
+
+You can view the test results and download reports from the workflow run page.
